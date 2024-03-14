@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+  <head>
+  
+    <title>Cinefree Cinemas</title>
+	
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="./image/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./image/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./image/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./image/favicons/site.webmanifest">
+    <link rel="mask-icon" href="./image/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/styles.css">
+	
+	<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const capas = document.querySelectorAll('.capa');
+      const modalContent = document.getElementById('modalContent');
+
+      capas.forEach(capa => {
+        // Adiciona o evento ao clicar na imagem
+        capa.addEventListener('click', function() {
+          // Recupera as informações da div da capa clicada
+          const titulo = capa.getAttribute('data-titulo');
+          const sinopse = capa.getAttribute('data-sinopse');
+         
+
+          // Preenche a modal com as informações específicas
+          modalContent.innerHTML = `<h3>${titulo}</h3><p>Sinopse: ${sinopse}</p>`;
+
+          // Abre a modal
+          $('#filmeModal').modal('show');
+        });
+
+        // Adiciona o evento de clique ao botão de compra
+        const comprarBtn = capa.querySelector('.comprar-btn');
+        comprarBtn.addEventListener('click', function() {
+          // Redireciona para a tela associada à imagem clicada
+          const link = capa.getAttribute('data-link');
+          window.location.href = link;
+        });
+      });
+    });
+  </script>
+  
+  </head>
+
+  <body>
+  
+  <div class="modal fade" id="filmeModal" tabindex="-1" role="dialog" aria-labelledby="filmeModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="filmeModalLabel">Informações do Filme</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+						<span aria-hidden="true">&times;</span>
+			
+					</button>
+				</div>
+				<div class="modal-body" id="modalContent"></div>
+			</div>
+
+			</div>
+		</div>
+
+      <!-- início topo -->
+      <div class="topo conteudo-flex">
+
+        <div class="topo-esquerdo conteudo-flex">
+          <!-- início do logo -->
+          <div class="topo-logo">
+		  <a href="./index.html">
+            <img src="./image/cinefree.png" alt="Imagem logotipo da cinefree" title="Imagem logotipo da cinefree">
+			</a>
+          </div>
+          <!-- fim do logo -->
+        </div>
+
+        <!-- início topo centro -->
+        <div class="topo-centro conteudo-flex">
+
+          <!-- início menu de navegação -->
+          <nav>
+            <ul class="topo-menu conteudo-flex">
+              <li><a href="index.html">Início</a></li>
+              <li><a href="./filmes.html">Filmes</a></li>
+			  <li><a href="./cadastro.html">Cadastro</a></li>
+              <li><a href="./html/contato.html">Suporte</a></li>
+            </ul>
+          </nav>
+          <!-- fim do menu de navegação -->
+
+          <!-- início barra de pesquisa -->
+          <div class="topo-pesquisa">
+            <div class="conteudo-pesquisa">
+              <form class="conteudo-flex" method="post">
+              <fieldset class="bar-pesquisa">
+                <input type="text" placeholder="Pesquisar um filme ..." alt="Digite aqui um filme para pesquisar">
+              </fieldset>
+              <fieldset class="btn-pesquisar conteudo-flex">
+                <button type="button" title="Pesquisar">
+                  <span class="fas fa-search"></span>
+                </button>
+              </fieldset>
+            </form>
+            </div>
+          </div>
+          <!-- fim da barra de pesquisa -->
+        </div>
+        <!-- fim topo centro -->
+		<!-- início topo direito -->
+        <div class="topo-direito">
+          <!-- área de login -->
+          <div class="sublogin">
+            <div>
+              <button class="subloginbtn">Menu<span class="fa fa-caret-down"></span></button>
+            </div>
+            <div class="sublogin-conteudo">
+				<a href="./login.html">
+					<button type="button" title="Login">Logout</button>
+				</a>
+				<p>ou</p>
+				<a href="./criarusuario.html">
+					<button type="button" title="Criar Usuario">Criar usuário</button>
+				</a>
+			</div>
+
+          </div>
+          <!-- fim área de login -->
+        </div>
+        <!-- fim topo direito -->
+    </div>
+    <!-- fim do topo -->
+
+      <!-- início contéudo principal -->
+      <div class="conteudo-principal">
+
+      <div class="primeiro-h1">
+        <h1>Filmes em Destaque</h1>
+      </div>
+
+      <!-- início destaque -->
+      <div class="elementos conteudo-flex">
+        <div class="capa" data-titulo="Hobbit: Uma jornada inesperada" 
+		
+			data-sinopse="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop pub" 
+			data-link="cadastro.html">
+			<img src="./image/imagens_index/hobbit.jpg" alt="imagem modelo capa de filme" title="imagem modelo capa de filme">
+			<button class="comprar-btn" type="button">Comprar Ingresso</button>
+		</div>
+		<div class="capa" data-titulo="Harry Poter: Prissioneiro de Askaban" 
+		
+			data-sinopse="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop pub" 
+			data-link="cadastro.html">
+			<img src="./image/imagens_index/hp.jpg" alt="imagem modelo capa de filme" title="imagem modelo capa de filme">
+			<button class="comprar-btn" type="button">Comprar Ingresso</button>
+		</div>
+		
+		<div class="capa" data-titulo="Animais fantásticos os segredos de Dumbledore" 
+		
+			data-sinopse="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop pub" 
+			data-link="cadastro.html">
+			<img src="./image/imagens_index/dumble.jpg" alt="imagem modelo capa de filme" title="imagem modelo capa de filme">
+			<button class="comprar-btn" type="button">Comprar Ingresso</button>
+		</div>
+      
+      </div>
+      <!-- fim destaque -->
+
+      
+    </div>
+    <!-- fim conteúdo principal -->
+
+    <!-- início rodape -->
+    <footer>
+      <div class="site-map conteudo-flex">
+        <div class="site-map-conteudo">
+          <ul>
+            <li><a href="#">Sobre nós</a></li>
+            <li><a href="#">Carreiras</a></li>
+            <li><a href="#">Perguntas frequentes</a></li>
+            <li><a href="#">Imprensa</a></li>
+          </ul>
+        </div>
+        <div class="site-map-conteudo">
+          <ul>
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="#">Política de Segurança</a></li>
+            <li><a href="#">Termo de Uso</a></li>
+            <li><a href="#">Avisos Legais</a></li>
+          </ul>
+        </div>
+        <div class="site-map-conteudo">
+          <ul>
+            <li><a href="#">Conta</a></li>
+            <li><a href="./html/suporte.html">Contato</a></li>
+            <li><a href="#">Centro de Ajuda</a></li>
+            <li><a href="#">Teste de Velocidade</a></li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <img src="./image/cinefree.png" alt="Imagem logotipo da cinefree" title="Imagem logotipo da cinefree">
+      </div>
+    </footer>
+    <!-- fim rodape -->
+
+  </body>
+
+</html>

@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+<head>
+    <title>Filmov - Cadastro</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="./image/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./image/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./image/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./image/favicons/site.webmanifest">
+    <link rel="mask-icon" href="./image/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="css/stylelogin.css">
+    <link rel="stylesheet" href="css/stylecadastro.css">
+</head>
+
+<body>
+
+    <div class="topo conteudo-flex">
+	 <div class="topo-esquerdo conteudo-flex">
+          <!-- início do logo -->
+          <div class="topo-logo">
+            <a href="./index.html">
+            <img src="./image/cinefree.png" alt="Imagem logotipo da cinefree" title="Imagem logotipo da cinefree">
+			</a>
+          </div>
+          <!-- fim do logo -->
+        </div>
+
+        <!-- início topo centro -->
+        <div class="topo-centro conteudo-flex">
+
+          <!-- início menu de navegação -->
+          <nav>
+              <ul class="topo-menu conteudo-flex">
+              <li><a href="index.html">Início</a></li>
+              <li><a href="./filmes.html">Filmes</a></li>
+			  <li><a href="./cadastro.html">Cadastro</a></li>
+              <li><a href="./html/contato.html">Suporte</a></li>
+            </ul>
+          </nav>
+          <!-- fim do menu de navegação -->
+
+          <!-- início barra de pesquisa -->
+          <div class="topo-pesquisa">
+            <div class="conteudo-pesquisa">
+              <form class="conteudo-flex" method="post">
+              <fieldset class="bar-pesquisa">
+                <input type="text" placeholder="Pesquisar um filme ..." alt="Digite aqui um filme para pesquisar">
+              </fieldset>
+              <fieldset class="btn-pesquisar conteudo-flex">
+                <button type="button" title="Pesquisar">
+                  <span class="fas fa-search"></span>
+                </button>
+              </fieldset>
+            </form>
+            </div>
+          </div>
+          <!-- fim da barra de pesquisa -->
+        </div>
+        <!-- fim topo centro -->
+     <!-- início topo direito -->
+        <div class="topo-direito">
+          <!-- área de login -->
+          <div class="sublogin">
+            <div>
+              <button class="subloginbtn">Menu<span class="fa fa-caret-down"></span></button>
+            </div>
+            <div class="sublogin-conteudo">
+				<a href="./login.html">
+					<button type="button" title="Logout">Logout</button>
+				</a>
+				<p>ou</p>
+				<a href="./criarusuario.html">
+					<button type="button" title="Criar Usuario">Criar usuário</button>
+				</a>
+			</div>
+
+          </div>
+          <!-- fim área de login -->
+        </div>
+        <!-- fim topo direito -->
+
+    </div>
+    <!-- fim do topo -->
+ 
+
+    <!-- Conteúdo principal -->
+    <div class="conteudo-principal conteudo-flex">
+        <div class="cadastro-container">
+            <h2>Cadastro de Cliente</h2>
+            <form action="cadastro.php" method="post" class="form-contato">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" id="sobrenome" name="sobrenome" required>
+
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+            
+                <label for="dataNascimento">Data de Nascimento:</label>
+                <input type="date" id="dataNascimento" placeholder="DD/MM/AAAA" name="dataNascimento" required>
+
+                <label for="senha">Senha:</label>
+                <input type="senha" id="senha" placeholder="Crie uma senha " name="senha" required>
+                
+
+                <button type="submit">Cadastrar Cliente</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- início rodape -->
+    <footer>
+      <div class="site-map conteudo-flex">
+        <div class="site-map-conteudo">
+          <ul>
+            <li><a href="#">Sobre nós</a></li>
+            <li><a href="#">Carreiras</a></li>
+            <li><a href="#">Perguntas frequentes</a></li>
+            <li><a href="#">Imprensa</a></li>
+          </ul>
+        </div>
+        <div class="site-map-conteudo">
+          <ul>
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="#">Política de Segurança</a></li>
+            <li><a href="#">Termo de Uso</a></li>
+            <li><a href="#">Avisos Legais</a></li>
+          </ul>
+        </div>
+        <div class="site-map-conteudo">
+          <ul>
+            <li><a href="#">Conta</a></li>
+            <li><a href="./html/contato.html">Contato</a></li>
+            <li><a href="#">Centro de Ajuda</a></li>
+            <li><a href="#">Teste de Velocidade</a></li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <img src="./image/cinefree.png" alt="Imagem logotipo da cienfree" title="Imagem logotipo da cinefree">
+      </div>
+      
+    </footer>
+    <!-- fim rodape -->
+
+  </body>
+
+</html>
