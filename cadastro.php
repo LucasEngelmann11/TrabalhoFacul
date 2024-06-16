@@ -12,6 +12,8 @@
     
     if (mysqli_query($conexao, $sql)){
         echo "Usuario cadastrado com sucesso";
+		 // Redirecionar para a página index.html
+                header("Location: login.php");
 
     }
     else{

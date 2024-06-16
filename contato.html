@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
 
   <head>
   
-    <title>Cinefree</title>
+    <title>Cinefree Cinemas</title>
+	
 	
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -22,14 +22,13 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
     <link rel="stylesheet" href="./css/styles.css">
-	
- 
+  
   </head>
 
   <body>
   
   <div class="modal fade" id="filmeModal" tabindex="-1" role="dialog" aria-labelledby="filmeModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
+			<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h5 class="modal-title" id="filmeModalLabel">Informações do Filme</h5>
@@ -38,12 +37,11 @@
 			
 					</button>
 				</div>
-					<div class="modal-body" id="modalContent">
-					</div>
+				<div class="modal-body" id="modalContent"></div>
 			</div>
 
+			</div>
 		</div>
-	</div>
 
       <!-- início topo -->
       <div class="topo conteudo-flex">
@@ -71,7 +69,7 @@
             </ul>
           </nav>
           <!-- fim do menu de navegação -->
-
+		  
         </div>
         <!-- fim topo centro -->
 		<!-- início topo direito -->
@@ -97,51 +95,97 @@
     </div>
     <!-- fim do topo -->
 
-      <!-- início contéudo principal -->
-      <div class="conteudo-principal">
+  <!-- início contéudo principal -->
+  <div class="conteudo-principal">
 
-      <div class="primeiro-h1">
-        <h1>Filmes em Destaque</h1>
-      </div>
-
-      <!-- início destaque -->
-      <div class="elementos conteudo-flex">
-        <div class="capa" data-titulo="Hobbit: Uma jornada inesperada" 
-				data-sinopse="Lorem Ipsum is simply dummy text of the printing and typesetting industry..."
-				data-link="html/filme01.html">
-			<img src="./image/imagens_index/hobbit.jpg" alt="imagem modelo capa de filme" title="imagem modelo capa de filme">
-			<div class="button-container">
-				<a href="html/filme01.html" class="comprar-btn" role="button">Ver mais</a>
-			</div>
-		</div>
-		<div class="capa" data-titulo="Harry Poter: Prissioneiro de Askaban" 
-		
-			data-sinopse="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop pub" 
-			data-link="cadastro.html">
-			<img src="./image/imagens_index/hp.jpg" alt="imagem modelo capa de filme" title="imagem modelo capa de filme">
-			<div class="button-container">
-				<a href="html/filme02.html" class="comprar-btn" role="button">Ver mais</a>
-			</div>
-		</div>
-		
-		<div class="capa" data-titulo="Animais fantásticos os segredos de Dumbledore" 
-		
-			data-sinopse="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop pub" 
-			data-link="cadastro.html">
-			<img src="./image/imagens_index/dumble.jpg" alt="imagem modelo capa de filme" title="imagem modelo capa de filme">
-			<div class="button-container">
-				<a href="html/filme03.html" class="comprar-btn" role="button">Ver mais</a>
-			</div>
-			
-      
-      </div>
-      <!-- fim destaque -->
-      
+    <div class="primeiro-h1">
+      <h1>Fale com a gente!</h1>
     </div>
-    <!-- fim conteúdo principal -->
 
-    
-    <!-- início rodape -->
+    <!-- início elemento -->
+
+    <div class="elementos conteudo-flex">
+
+      <div class="form-mapa conteudo-flex">
+
+        <!-- inínicio formulário -->
+        <div class="formulario">
+          <form class="form-contato" method="post">
+
+            <div class="dados-user">
+              <div class="icone-contato conteudo-flex">
+                <span class="far fa-user"></span>
+              </div>
+              <fieldset>
+                  <input type="text" id="nome" placeholder="Nome" class="user" required autofocus>
+              </fieldset>
+            </div>
+
+            <div class="dados-user">
+              <div class="icone-contato conteudo-flex">
+                <span class="far fa-envelope"></span>
+              </div>
+              <fieldset>
+                  <input type="email" id="email" placeholder="Email" class="email" required>
+              </fieldset>
+            </div>
+
+            <div class="dados-user">
+              <div class="icone-contato conteudo-flex">
+                <span class="fas fa-phone-alt"></span>
+              </div>
+              <fieldset>
+                <input type="tel" id="telefone" placeholder="Telefone" class="telefone" required>
+              </fieldset>
+            </div>
+
+            <div class="dados-msg">
+              <fieldset>
+                <select name="assunto" id="assunto" required>
+                  <option select selected disabled>Selecione o assunto</option>
+                  <option value="0">Dúvidas</option>
+                  <option value="1">Sugestões</option>
+                  <option value="2">Reclamações</option>
+                  <option value="3">Financeiro</option>
+                  <option value="4">Suporte</option>
+                  <option value="5">Ouvidoria</option>
+                  <option value="6">Outras informações</option>
+                </select>
+              </fieldset>
+            </div>
+
+            <div class="dados-msg">
+              <fieldset>
+                <textarea id="mensagem" placeholder="Mensagem" required></textarea>
+              </fieldset>
+            </div>
+
+            <div class="dados-msg">
+              <fieldset>
+                <button type="submit" id="botao" title="Enviar">Enviar</button>
+              </fieldset>
+            </div>
+
+          </form>
+        </div>
+        <!-- fim formulário -->
+
+        <!-- início mapa -->
+        <div class="mapa">
+          <div class="embed-mapa">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.84302934144!2d-46.625640385022!3d-23.574080484676525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce597ac07fc4db%3A0x2082237196d0d781!2sAv.%20Lins%20de%20Vasconcelos%2C%201222%20-%20Cambuci%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001538-001!5e0!3m2!1spt-BR!2sbr!4v1587329886866!5m2!1spt-BR!2sbr" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+            </iframe>
+          </div>
+        </div>
+        <!-- fim mapa -->
+
+      </div>
+
+  </div>
+  <!-- fim conteúdo principal -->
+
+ <!-- início rodape -->
     <footer>
       <div class="site-map conteudo-flex">
         <div class="site-map-conteudo">
@@ -166,9 +210,7 @@
       
     </footer>
     <!-- fim rodape -->
-	
-	
 
-  </body>
+</body>
 
 </html>
